@@ -1,0 +1,67 @@
+html { width: 100%; height:100%; overflow:hidden; }
+
+body { 
+    width: 100%;
+	height:100%;
+	font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+}
+.login-form h1{
+	color: #9c9c9c;
+}
+.login-form > div{
+    /*border: 1px dashed darkgrey;*/
+    padding: 40px 10px;
+	border-radius: 20px;
+}
+.login-email,
+.login-pass,
+.login-submit{
+	max-width: 300px;
+	margin: auto;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.login-email,
+.login-pass{
+    border: 0;
+    box-shadow: none;
+    border-bottom: 2px solid darkgray;
+    border-radius: 0;	
+}
+
+.login-submit{
+	height: 75px;
+	font-size: 30px;
+	width: 75px;
+	border-radius: 50%;
+}
+.login-submit:hover{
+	color: #478e46;
+}
+
+input { 
+	width: 100%; 
+	margin-bottom: 10px; 
+	background: rgba(0,0,0,0.3);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+input:focus{
+    border-color: #a9a9a9 !important;
+    outline: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}

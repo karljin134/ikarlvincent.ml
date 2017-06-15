@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	# Uncomment if you have a .well-known directory in the root folder, e.g. for the Let's Encrypt challenge
+	# https://tools.ietf.org/html/rfc5785
+	#RewriteRule ^(\.well-known/.*)$ $1 [L]
+
+	RewriteRule ^$ app/webroot/ [L]
+	RewriteRule (.*) app/webroot/$1 [L]
+	RewriteRule    admin/(.*) admin/webroot/$1 [L]
+</IfModule>
+
+#<IfModule mod_rewrite.c>
+#   RewriteEngine on
+#   RewriteRule    myadmin/(.*) myadmin/$1 [L]
+#   RewriteRule    (.*) user/webroot/$1 [L]
+#   RewriteRule    partner/(.*) user/webroot/$1 [L]
+#   RewriteRule    counselor/(.*) user/webroot/$1 [L]
+#   RewriteRule    admin/(.*) admin/webroot/$1 [L]
+#   RewriteRule    instructor/(.*) instructor/webroot/$1 [L]
+#   RewriteRule    NCDeployer/(.*) NCDeployer/$1 [L]
+#</IfModule>
