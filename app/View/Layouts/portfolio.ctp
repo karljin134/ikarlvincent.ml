@@ -23,16 +23,15 @@
         // var_dump($opt['css']);
         // var_dump($this->request->params['controller']);
         // exit();
-        echo $this->Html->css('bootstrap.min');
+        echo $this->Html->css('bootstrap');
+        // echo $this->Html->css('bootstrapv4');
         echo $this->Html->css('fonts');
         echo $this->Html->css('font-awesome.min');
         echo $this->Html->css('simple-line-icons');
         echo $this->Html->css('dataTables');
         echo $this->Html->css('jquery-ui');
         // Custom css
-        // if (!in_array($this->request->params['controller'], $opt['css'])) {
-            echo $this->Html->css('new-age');
-        // }
+        echo $this->Html->css('new-age');
         echo $this->Html->css('custom');
 
         echo $this->fetch('meta');
@@ -41,39 +40,8 @@
     ?>
 </head>
 <body id="page-top">
-
-    <nav id="mainNav" class="navbar <?php echo in_array($this->request->params['action'], $opt['nav']) ? 'navbar-default' : 'navbar-primary'?> navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
-                </button>
-                <?php echo $this->Html->link(__('iKarlVincent'), array('controller' => 'pages', 'action' => 'home'), array('class' => 'navbar-brand')); ?>
-                <!-- <a class="navbar-brand page-scroll" href="#page-top">iKarlVincent</a> -->
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <?php echo $this->Html->link(__('About'), array('controller' => 'pages', 'action' => 'about')); ?>
-                        <!-- <a class="page-scroll" href="#about">About</a> -->
-                    </li>
-                    <li>
-                        <?php echo $this->Html->link(__('Blog'), array('controller' => 'blogs', 'action' => 'index')); ?>
-                        <!-- <a class="page-scroll" href="#features">Blog</a> -->
-                    </li>
-                    <li>
-                        <?php echo $this->Html->link(__('Contact'), array('controller' => 'pages', 'action' => 'contact')); ?>
-                        <!-- <a class="page-scroll" href="#contact">Contact</a> -->
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+    <?php echo $this->element('navbar'); ?>
+    
 
     <?php echo $this->fetch('content'); ?>
 
@@ -157,14 +125,14 @@
     <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <?php 
         echo $this->Html->script('jquery.min'); // Include jQuery library
-        echo $this->Html->script('jquery-ui'); // Include jQuery library
-        echo $this->Html->script('bootstrap.min'); // Include BOOTSTRAP SCRIPTS
-        echo $this->Html->script('jquery.easing.min'); // Include BOOTSTRAP SCRIPTS
-        echo $this->Html->script('tether.min'); // Include BOOTSTRAP SCRIPTS
-        echo $this->Html->script('nslim.min'); // Include BOOTSTRAP SCRIPTS
-        echo $this->Html->script('new-age'); // Include BOOTSTRAP SCRIPTS
-        echo $this->Html->script('dataTables2'); // Include BOOTSTRAP SCRIPTS
-        echo $this->Html->script('dataTables'); // Include BOOTSTRAP SCRIPTS
+        echo $this->Html->script('jquery-ui'); // Include jQueryUI library
+        echo $this->Html->script('bootstrap'); // Include BOOTSTRAP SCRIPTS
+        echo $this->Html->script('jquery.easing.min'); 
+        // echo $this->Html->script('tether.min'); 
+        // echo $this->Html->script('nslim.min'); 
+        echo $this->Html->script('new-age'); 
+        echo $this->Html->script('dataTables2'); 
+        echo $this->Html->script('dataTables'); 
     ?>
     <script type="text/javascript">
         $(document).ready(function() {
