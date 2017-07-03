@@ -33,7 +33,7 @@
 <section id="about" class="download bg-default text-center">
     <div class="container-fluid">
         <div class="row about">
-            <div class="col-md-8 offset-2">
+            <div class="col-md-8 col-md-offset-2">
                 <h2 class="section-heading">All About Me</h2>
                 <p>To me, programming is a way of looking at things. As a painter understand the world through his art, I use programming as a way to reason about phenomena and model them. I think programming is now pervading so much of our life.</p><hr>
             </div>
@@ -42,7 +42,7 @@
             <div class="col-md-6">
                 <img src="img/profile.jpg" width="100%" min-height='200px'>
             </div>
-            <div class="col-md-4 offset-1">
+            <div class="col-md-4 col-md-offset-1">
                 <br><br><br><br><h1><b>Hi! I'm Karl</b></h1><br><br>
                 <p>I am freelance web programmer located in Cebu City, Philippines. I had spent 2 years in the corporate world as a web developer, working both in the office and then working remotely from home.</p>
                 <p>I am a full time web developer, this is not a “hobby” for me. If you hire me, you can depend on me being available ongoing, as needed for years to come. Take a look around my personal website to get an idea of the web development services I offer and recommendations from my clients.</p>

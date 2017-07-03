@@ -2,7 +2,7 @@
 	<div class="row">
 
 		<!-- Blog Entries Column -->
-		<div class="col-md-8">
+		<div class="col-md-9">
 
 			<h1 class="page-header">Blog Posts
 				<small>Collection of Knowledge </small>
@@ -12,98 +12,33 @@
 			$post = $post['Posts']; 
 			$author = $authors[$post['author_id']];
 			?>
-			
-			<h2><a href="<?php echo $this->Html->url('/blog/view/'.$post['id']); ?>"><?php echo $post['title']; ?></a></h2>
-			<p class="lead">by <?php echo $author['name']; ?></p>
-			<p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
-			<!-- <hr> -->
-			<!-- <img class="img-responsive" src="http://placehold.it/900x300" alt=""> -->
-			<!-- <hr> -->
-			<p><?php echo $post['content']; ?></p>
-			<a class="btn btn-primary" href="<?php echo $this->Html->url('/blog/view/'.$post['id']); ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-
-<div class="card-columns">
-  <div class="card">
-    <img class="card-img-top img-fluid" src="..." alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title">Card title that wraps to a new line</h4>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-  </div>
-  <div class="card p-3">
-    <blockquote class="card-block card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>
-        <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card">
-    <img class="card-img-top img-fluid" src="..." alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title">Card title</h4>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card card-inverse card-primary p-3 text-center">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-      <footer>
-        <small>
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card text-center">
-    <div class="card-block">
-      <h4 class="card-title">Card title</h4>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img img-fluid" src="..." alt="Card image">
-  </div>
-  <div class="card p-3 text-right">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>
-        <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card">
-    <div class="card-block">
-      <h4 class="card-title">Card title</h4>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
-			<hr>
+			<div class="col-md-4">
+        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+  			<center><h2><a href="<?php echo $this->Html->url('/blog/view/'.$post['id']); ?>"><?php echo $post['title']; ?></a></h2></center>
+  			<center><small>by <?php echo $author['name']; ?></small></center><br>
+        <div class="text-wrap">
+          <p class="limit-text"><?php echo $post['content']; ?>. Additional content to test long descriptions for the blog post.</p>
+        </div>
+        <center><a class="btn" href="<?php echo $this->Html->url('/blog/view/'.$post['id']); ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a></center>
+        <p class="post-time"><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
+      </div>
 
 	<?php } ?>
-            <!-- Pager -->
-            <ul class="pager">
-                <li class="previous">
-                    <a href="#">← Older</a>
-                </li>
-                <li class="next">
-                    <a href="#">Newer →</a>
-                </li>
-            </ul>
-
-        </div>
+      <!-- Pager -->
+      <div class="col-md-12">
+        <ul class="pager">
+          <li class="previous">
+            <a href="#">← Older</a>
+          </li>
+          <li class="next">
+            <a href="#">Newer →</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
         <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-4">
+        <div class="col-md-3">
 
             <!-- Blog Search Well -->
             <div class="well">

@@ -33,6 +33,11 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
     // Before Render
     function beforeRender() {
+        
+        if ($this->layout == 'default') {
+            $this->layout = 'admin';
+        }
+        
         if($this->name == 'CakeError') {
             $this->layout = 'errorv2';
         }

@@ -64,6 +64,9 @@ class UserManageController extends AppController {
 				)
 			)
 		);
+		if (!$users) {
+			return $this->redirect('/user-manage');
+		}
 		$this->set('users', $users);
 	}
 }

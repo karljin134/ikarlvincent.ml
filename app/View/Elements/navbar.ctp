@@ -1,8 +1,3 @@
-<br><br><br>
-<?php echo $this->request->params['action']; 
-var_dump($opt['nav']);
-?>
-<nav id="mainNav" class="navbar <?php echo in_array($this->request->params['action'], $opt['nav']) ? 'navbar-default' : 'navbar-primary'?> navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -33,4 +28,3 @@ var_dump($opt['nav']);
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-    </nav>

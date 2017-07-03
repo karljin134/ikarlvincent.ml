@@ -70,7 +70,8 @@ class BlogsController extends AppController {
 		$posts = $this->Posts->find('all', array(
                 'conditions' => array(
                     'Posts.status' => 1
-                )
+                ),
+                'order' => array('created' => 'desc')
             )
         );
         $this->set('posts', $posts);

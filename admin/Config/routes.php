@@ -39,6 +39,7 @@
 	// Manage Posts Routes
 	Router::connect('/post-manage', array('controller' => 'PostManage', 'action' => 'index'));
 	Router::connect('/post-manage/details/*', array('controller' => 'PostManage', 'action' => 'details'));
+	Router::connect('/post-manage/create', array('controller' => 'PostManage', 'action' => 'create'));
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.

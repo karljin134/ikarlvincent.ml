@@ -40,12 +40,16 @@
     ?>
 </head>
 <body id="page-top">
-    <?php echo $this->element('navbar'); ?>
-    
-
+    <nav id="mainNav" class="navbar <?php echo in_array($this->request->params['action'], $opt['nav']) ? 'navbar-default' : 'navbar-primary'?> navbar-fixed-top">
+        <?php echo $this->element('navbar'); ?>
+    </nav>
+    <?php echo in_array($this->request->params['action'], $opt['nav']) ? '' : '<br><br><div class="container-fluid img-header"></div>'?>
     <?php echo $this->fetch('content'); ?>
-
+    <div class="container-fluid img-footer">
+    <!-- <img src="<?php echo $this->webroot;?>/img/footer-img.png"> -->
+    </div>
     <footer>
+<!-- 
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-6 footerleft ">
@@ -82,7 +86,7 @@
                     <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                         <div class="fb-xfbml-parse-ignore">
                           <!--   <blockquote cite="https://www.facebook.com/karljin134"><a href="https://www.facebook.com/karljin134">Facebook</a></blockquote> -->
-                            <ul class="list-inline list-social">
+                            <!-- <ul class="list-inline list-social">
                                 <li class="social-twitter">
                                     <a href="#"><i class="fa fa-twitter"></i> </a>
                                 </li>
@@ -97,8 +101,8 @@
                     </div>
                 </div>
             </div>
-        </div><br><br>
-        <div class="container">
+        </div><br><br> -->
+       <div class="container">
             <div class="row">
                 <div class="col-sm-6">
                     <p>&copy; 2017 Kaaru Rimu. All Rights Reserved.</p>
@@ -117,8 +121,6 @@
                     </ul>
                 </div>
             </div>
-            
-
         </div>
     </footer>
     <!-- FOOTER SECTION END-->

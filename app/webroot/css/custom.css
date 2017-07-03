@@ -48,8 +48,8 @@
     letter-spacing: 1px;
 }
 .navbar-primary{
-	background: whitesmoke;
-	border-bottom: 1px solid #e6e6e6;
+	background: #414042;
+	border-bottom: 1px solid #414042;
 }
 .navbar-primary a{
 	color: grey;
@@ -550,6 +550,36 @@ form.contact input:focus, form.contact textarea:focus {
 			ERROR PAGES
 ------------------------------*/
 
+/*-----------------------------
+			BLOG INDEX PAGE
+------------------------------*/
+.text-wrap {
+    min-height: 85px;
+}
+.limit-text {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+.post-time {
+	text-align: right;
+	font-size: 10px;
+	padding-right: 10px;
+}
+.img-footer{
+	height: 100px;
+	background-size: cover;
+	background-image: url('../img/footer-img4.png');
+}
+.img-header{
+	height: 100px;
+	background-size: cover;
+	background-image: url('../img/header-img.png');
+}
+/*-----------------------------
+			BLOG INDEX PAGE
+------------------------------*/
 @media screen and (max-width: 991px) {
     .res-margin {
         margin-top: 15px;

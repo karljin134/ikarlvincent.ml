@@ -1,6 +1,12 @@
 <br>
 <div class="row">
 	<div class="col-lg-12">
+		<a href="<?php echo $this->Html->url('/post-manage/create/'); ?>" class="btn btn-md btn-primary pull-right"><span class="fa fa-plus"> Add Post</span></a>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-lg-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				Posts Table
@@ -32,7 +38,7 @@
 									echo $tags;
 								?>
 								</td>
-								<td><?php echo $post['Posts']['author_id']; ?></td>
+								<td><?php echo "<a href='".$this->Html->url('/user-manage/details/'.$post['Posts']['author_id'])."'>".$post['Posts']['author_id']."</a>"; ?></td>
 								<td><?php echo "<a href='".$this->Html->url('/post-manage/details/'.$post['Posts']['id'])."' class='btn btn-xs btn-primary'>View</a>"; ?></td>
 							</tr>
 						<?php } ?>

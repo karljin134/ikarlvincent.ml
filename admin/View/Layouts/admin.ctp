@@ -16,6 +16,7 @@
         echo $this->Html->css('morris');
         echo $this->Html->css('font-awesome');
         echo $this->Html->css('dataTables');
+        echo $this->Html->css('editor');
         // Custom css
         echo $this->Html->css('custom');
 
@@ -310,9 +311,13 @@
 
         echo $this->Html->script('dataTables2'); // Include BOOTSTRAP SCRIPTS
         echo $this->Html->script('dataTables'); // Include BOOTSTRAP SCRIPTS
+        // echo $this->Html->script('editor'); 
+        echo $this->Html->script('angular.min'); 
+        echo $this->Html->script('angularApp'); 
     ?>
     <script type="text/javascript">
         $(document).ready(function() {
+            // $("#txtEditor").Editor();
             $('#dataTable').DataTable( {
                 "order": [],
                 "columnDefs": [ {

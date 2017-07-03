@@ -32,7 +32,6 @@ class PostManageController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('a');
     }
 /**
  * This controller does not use a model
@@ -51,13 +50,11 @@ class PostManageController extends AppController {
  * @throws NotFoundException When the view file could not be found
  *   or MissingViewException in debug mode.
  */
-	public function index() {
-		$this->layout = 'admin';		
+	public function index() {		
 		$posts = $this->Posts->find('all');
         $this->set('posts', $posts);
 	}
-    public function details($id) {
-        $this->layout = 'admin';        
+    public function details($id) {       
         $post = $this->Posts->find('first', array(
                 'conditions' => array(
                     'Posts.id' => $id
@@ -65,5 +62,26 @@ class PostManageController extends AppController {
             )
         );
         $this->set('post', $post);
+    }
+    public function create() {   
+        $user = $this->Auth->user('id');
+        if ($this->request->is('post')) {
+            if ($this->request->data['savepost'] == 'publish') {
+                $this->request->data['Posts']['status'] = 1;
+            }
+            if ($this->request->data['savepost'] == 'draft') {
+                $this->request->data['Posts']['status'] = 0;
+            }
+            $this->request->data['Posts']['created_ip'] = $this->request->clientIp();
+            $this->request->data['Posts']['author_id'] = $user;
+            $this->Posts->create();
+            if ($this->Posts->save($this->request->data)) {
+                $this->Session->setFlash(__('The post saved. Thank you.'), 'alert', array('class' => 'alert alert-success alert-dismissable'));
+                $post_id = $this->Posts->getLastInsertId();
+                return $this->redirect(array('controller' => 'post-manage', 'action' => 'details', $post_id));
+            } else {
+                $this->Session->setFlash(__('The post could not be saved. Please, try again.'), 'alert', array('class' => 'alert alert-danger alert-dismissable'));
+            }
+        }     
     }
 }
